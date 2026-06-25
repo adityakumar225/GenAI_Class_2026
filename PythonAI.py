@@ -14,7 +14,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Create the Gemini AI client using your API key
-robo = genai.Client(api_key="API_KEY")
+robo = genai.Client(api_key=st.secrets["API_KEY"])
 
 # Start a new chat session with the Gemini model
 mychat = robo.chats.create(model="gemini-flash-lite-latest")
